@@ -1,0 +1,4 @@
+git pull is shorthand for git fetch followed by git merge FETCH_HEAD
+
+delete merges first
+

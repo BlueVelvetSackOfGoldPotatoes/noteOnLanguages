@@ -1,0 +1,37 @@
+To create a new branch and visit it ->
+	git checkout -b newbranch
+Which is shorthand for ->
+	git branch newbranch
+	git checkout newbranch
+
+To delete a branch ->
+
+	git branch -d branchToBeDeleted
+
+A hotfix branch can be useful as an intermedium between your working branch and Master ->
+
+	git checkout -b hotfix
+
+	git commit -a -m 'fixed the problem'
+
+	git checkout master
+
+	git merge hotfix
+
+	git branch -d hotfix
+
+	git checkout workbranch
+
+In order to see the changes done to master via hotfifx u must ->
+	git checkout master
+	git merge workbranch
+
+Git branch can be used to see all existing branches, remote and local ->
+	git branch -a 
+
+Git remote can be used to show general information about a branch in relation to your own repo ->
+	git remote show branch
+
+Git branch tells you in which branch you're in atm ->
+	git branch
+	

@@ -1,0 +1,14 @@
+Git status shows, for example, which files are unmerged ->
+	git status
+
+Git add adds files - either changes or new files, to the next commit. It will not add ignored files by default ->
+	git add file
+To add ignored files use -f (force) ->
+	git add -f file
+
+To create a .gitignore file in windows ->
+	Create a text file gitignore.txt
+	Open it with a text editor and add rules, then save and close
+	Hold shift, right click the folder you're in and select Open command window here
+	Then rename the file using the command line by typing: 
+	ren gitignore.txt .gitignore

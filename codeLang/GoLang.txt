@@ -1,0 +1,45 @@
+Workspace in go should be composed by two files: 
+	src -> containing the go source files
+	bin -> containing executable commands
+
+Skeleton: 
+
+	package main
+
+	import "fmt"
+	
+	func main() {
+		fmt.Println("Hello, world.")
+	}
+
+
+For building libraries use the following
+	example code:
+	// Package stringutil contains utility functions for working with strings.
+	package stringutil
+
+	// Reverse returns its argument string reversed rune-wise left to right.
+	func Reverse(s string) string {
+		r := []rune(s)
+		for i, j := 0, len(r)-1; i < len(r)/2; i, j = i+1, j-1 {
+			r[i], r[j] = r[j], r[i]
+		}
+		return string(r)
+	}
+
+Then 
+
+While in the directory you then write "go build" to compile the librarie
+and then go install to compile the main
+
+cd project
+go build
+./project
+
+--------------------
+Inside a function, the := short assignment statement can be used in place of a var declaration with implicit type. Outside a function, every statement begins with a keyword (var, func, and so on) and so the := construct is not available.
+-------------------- vars
+ToBe   bool       = false
+fmt.Printf("Type: %T Value: %v\n", ToBe, ToBe);
+
+$Type: bool Value: false
